@@ -3,7 +3,7 @@ package vectors_test
 import (
 	"testing"
 
-	"github.com/benduncan/fast-hnsw/vectordb/vectors"
+	"github.com/benduncan/gofast-hnsw/vectors"
 	"github.com/stretchr/testify/assert"
 )
 

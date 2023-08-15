@@ -6,9 +6,9 @@ import (
 	"log"
 	"testing"
 
-	"github.com/benduncan/fast-hnsw/vectordb/hnsw"
-	"github.com/benduncan/fast-hnsw/vectordb/queue"
-	"github.com/benduncan/fast-hnsw/vectordb/vectors"
+	hnsw "github.com/benduncan/gofast-hnsw"
+	"github.com/benduncan/gofast-hnsw/queue"
+	"github.com/benduncan/gofast-hnsw/vectors"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -31,10 +31,10 @@ func Test_New(t *testing.T) {
 
 	assert.Nil(t, err)
 
-	assert.Equal(t, uint16(8), h.M)
-	assert.Equal(t, uint16(8), h.Mmax)
-	assert.Equal(t, uint16(16), h.Mmax0)
-	assert.Equal(t, uint16(200), h.Efconstruction)
+	assert.Equal(t, 8, h.M)
+	assert.Equal(t, 8, h.Mmax)
+	assert.Equal(t, 16, h.Mmax0)
+	assert.Equal(t, 200, h.Efconstruction)
 
 	assert.Equal(t, 1, len(h.NodeList.Nodes))
 
@@ -170,7 +170,7 @@ func Test_ValidateInsertSearch(t *testing.T) {
 		},
 	}
 
-	fmt.Println(tests)
+	//fmt.Println(tests)
 
 	for _, tc := range tests {
 
@@ -251,7 +251,7 @@ func Test_ValidateInsertSearch(t *testing.T) {
 				for i3 := tc.K - 1; i3 >= 0; i3-- {
 
 					if bestCandidates.Len() == 0 {
-						fmt.Println("No matches")
+						//fmt.Println("No matches")
 						break
 					}
 

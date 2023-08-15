@@ -1,11 +1,10 @@
 package distance_test
 
 import (
-	"fmt"
 	"testing"
 
-	"github.com/benduncan/fast-hnsw/vectordb/distance"
-	"github.com/benduncan/fast-hnsw/vectordb/vectors"
+	"github.com/benduncan/gofast-hnsw/distance"
+	"github.com/benduncan/gofast-hnsw/vectors"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -56,7 +55,7 @@ func Test_L2(t *testing.T) {
 
 		assert.Equal(t, d1, vectorTest[i].distance)
 
-		fmt.Println(vectorTest[i].x, vectorTest[i].y)
+		//fmt.Println(vectorTest[i].x, vectorTest[i].y)
 
 	}
 

@@ -12,8 +12,8 @@ import (
 
 	"log"
 
-	"github.com/benduncan/fast-hnsw/vectordb/distance"
-	"github.com/benduncan/fast-hnsw/vectordb/queue"
+	"github.com/benduncan/gofast-hnsw/distance"
+	"github.com/benduncan/gofast-hnsw/queue"
 	"github.com/willf/bitset"
 )
 

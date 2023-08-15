@@ -4,7 +4,7 @@ import (
 	"container/heap"
 	"testing"
 
-	"github.com/benduncan/fast-hnsw/vectordb/queue"
+	"github.com/benduncan/gofast-hnsw/queue"
 	"github.com/stretchr/testify/assert"
 )
 

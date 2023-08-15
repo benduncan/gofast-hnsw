@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/benduncan/fast-hnsw/vectordb/hnsw"
-	"github.com/benduncan/fast-hnsw/vectordb/queue"
-	"github.com/benduncan/fast-hnsw/vectordb/vectors"
+	hnsw "github.com/benduncan/gofast-hnsw"
+	"github.com/benduncan/gofast-hnsw/queue"
+	"github.com/benduncan/gofast-hnsw/vectors"
 
 	. "github.com/klauspost/cpuid/v2"
 )
@@ -143,7 +143,7 @@ func main() {
 			log.Fatal(perr)
 		}
 
-		f2, err := os.Create(fmt.Sprintf("%s.mem", profile))
+		f2, err := os.Create(fmt.Sprintf("%s.mem", *profile))
 
 		if err != nil {
 			log.Fatal(err)
@@ -278,7 +278,7 @@ func main() {
 
 		}
 
-		fmt.Println("\nBrute Search Stats:\n")
+		fmt.Printf("\nBrute Search Stats:\n")
 
 		end = time.Since(start)
 

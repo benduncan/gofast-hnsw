@@ -1,4 +1,4 @@
-module github.com/benduncan/fast-hnsw
+module github.com/benduncan/gofast-hnsw
 
 go 1.20
 
